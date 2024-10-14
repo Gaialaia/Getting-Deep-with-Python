@@ -11,3 +11,13 @@ a = int(input(" Enter a: "))
 b = int(input(" Enter b: "))
 c = int(input(" Enter c: "))
 
+if b + c > a and c + a > b and b + a > c:
+    print('Triangle exists')
+    if a == b > c or a == c > b or b == c > a:
+        print('It is an isosceles triangle! 𓇮')
+    elif a == b == c:
+        print('It is an equilateral triangle!')
+    elif a != b != c:
+        print('It is a versatile triangle!')
+else:
+    print('No such triangle')
