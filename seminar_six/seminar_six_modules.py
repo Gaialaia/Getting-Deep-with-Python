@@ -1,4 +1,3 @@
-
 def count_values(words_list):
     words_list_dict = {}
     for i in words_list:
@@ -20,4 +19,9 @@ def line(line):
 
 
 
+def unique_elms(list_one, list_two):
+    set_one = set(list_one)
+    set_two = set(list_two)
+    unique_elms = set_one^set_two
+    return list(unique_elms)
 
