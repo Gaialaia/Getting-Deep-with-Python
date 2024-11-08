@@ -1,5 +1,5 @@
 
-from count_values import count_values
+from seminar_six_modules import count_values
 
 print(count_values( ["Chicken",
     "Sheep",
