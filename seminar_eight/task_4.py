@@ -3,8 +3,6 @@ from csv import DictWriter
 from itertools import product
 from os import write
 
-
-
 def count_total(input_file, output_file):
     revenue = {}
     with open(input_file, 'r', newline='') as csv_read:
@@ -33,21 +31,3 @@ if __name__ == "__main__":
     count_total('sales.csv','total_sales.csv')
 
 
-
-
-
-#
-sls = [{'name': 'Laptop', 'price': 999.99, 'quantity': 10}, {'name': 'Mouse', 'price': 19.99, 'quantity': 100},
-       {'name': 'Keyboard', 'price': 49.99, 'quantity': 50}]
-
-print(sls[0].items())
-# print()
-#
-j = dict.fromkeys(sls[0].keys())
-#
-# print(j)
-#
-# import csv
-# with open('test.csv', 'w', newline='') as f:
-#     writer = csv.writer(f)
-#     writer.writerow(j)
