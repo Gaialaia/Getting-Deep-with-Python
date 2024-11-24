@@ -3,7 +3,7 @@ import zipfile
 
 
 def make_zip(dir_path_to_archive, dest_dir):
-    with zipfile.ZipFile('seminar_seven.zip', 'w', zipfile.ZIP_DEFLATED) as zf:
+    with zipfile.ZipFile('seminar_seven.zip', 'w', zipfile.ZIP_DEFLATED) as zf: # zf - file descriptor !
         for address, dirs, files in os.walk(dir_path_to_archive):
             for file in files:
                 file_path = os.path.join(address,file)
