@@ -3,7 +3,7 @@ from functools import wraps
 def count_func_call(func):
     @wraps(func)
     def wrapper(arg):
-        wrapper.count += 1
+        wrapper.count += 1 #function wrapper attribute
         res = func(arg)
         print(f'Function {func.__name__} has been called for {wrapper.count} time(s) ')
         return res
