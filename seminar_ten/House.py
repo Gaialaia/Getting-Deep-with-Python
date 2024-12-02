@@ -15,7 +15,7 @@ class Human:
 
     def eat(self):
         if True:
-            self.satiation_level += 10
+            self.satiation_level += 44
             House.money -= 20
             print(f'{self.satiation_level}, {House.money}')
 
@@ -26,7 +26,7 @@ class Human:
             print(f'Now you have {House.food} units of food and {House.money} left')
 
     def go_for_work(self):
-          House.money += 50
+          House.money += 150
           self.satiation_level -= 30
           print(f'Your balance is {House.money} money units '
                 f'and your satiation level {self.satiation_level}')
@@ -50,6 +50,8 @@ class Human:
 
         if self.satiation_level < 20:
             Human.eat(self)
+        elif House.food < 10:
+            Human.go_for_grocery(38,26)
         elif House.money < 50:
             Human.go_for_work(self)
         elif dice == 1:
@@ -60,6 +62,10 @@ class Human:
             Human.relax_time(self)
         else:
             Human.play_games(self)
+        if self.satiation_level <=0:
+            print(f'{self.name} has died of hunger')
+
+
         print(self.__str__())
 
 
@@ -82,11 +88,17 @@ h3 = Human('Mars', hse3)
 
 
 
+# for day in range(1,366):
+#     print(f'day {day}')
+#     if not h1.throw_dice() or not h2.throw_dice():
+#         print(f'person died on {day} day')
+#
+#         print(f' {h1.__str__()}, \n {h2.__str__()}')
+
+
 for day in range(1,366):
     print(f'day {day}')
-    if not h1.throw_dice() or not h2.throw_dice():
+    if not h3.throw_dice():
         print(f'person died on {day} day')
 
-        print(h1.__str__(), h2.__str__())
-
-
+        print(f' {h3.__str__()}')
