@@ -24,12 +24,9 @@ class Bird(Animal):
         self.wingspan = wingspan
         Animal.__init__(self, name)
 
-
-
     def show_wing_length(self):
         wing_length = self.wingspan / 2
         return wing_length
-
 
     def __str__(self):
         return f'{super().__str__()} wing length: {self.wingspan}'
@@ -38,8 +35,8 @@ class Bird(Animal):
 class Fish(Animal):
 
     def __init__(self, name, max_depth):
-        self.max_depth = max_depth
-        super().__init__(name)
+            self.max_depth = max_depth
+            Animal.__init__(self,name)
 
 
     def show_size(self):
@@ -71,11 +68,15 @@ class Mammal(Animal):
             return f'{self.name} is an usual mammal'
 
     def __str__(self):
-        return f'{super().__str__()} weight: {self.weight}'
+        return f'{super().__str__()}, weight: {self.weight}'
 
-class Animal_factory(Animal):
+class Animal_factory:
 
-    def create_animal(animal_type, *args):
+    # def __init__(self, Animal.__class__.name):
+
+
+    def create_animal(animal_type ,*args):
+
         animal_classes = {'bird': Bird,
                           'mammal': Mammal,
                           'fish' : Fish
@@ -83,22 +84,27 @@ class Animal_factory(Animal):
         if animal_type in animal_classes:
             return animal_classes[animal_type](*args)
         else:
-            print(f' wrong {animal_type}')
+            return f' wrong {animal_type}'
+
 
 if __name__ == '__main__':
 
     animal1 = Animal_factory.create_animal('bird', 'Fluffy', 120)
     animal2 = Animal_factory.create_animal('fish', 70, 'Guru')
     animal3 = Animal_factory.create_animal('mammal', 'Kitty', 30)
+    animal4 = Animal_factory.create_animal('mammal', 'cat', 25)
+    print(animal4.show_weight())
+    print(animal1.show_wing_length())
+    print(animal1.animal_name())
 
-    bird2 = Bird('Sparrow', 20)
+    bird2 = Bird('Windy', 20)
     fish2 = Fish('Flounder', 20)
     elephant = Mammal('Bambie', 500)
     print(elephant)
     print(fish2)
-
-
     print(fish2.show_size())
     print(elephant.show_weight())
+    print(bird2.__getstate__())
+
 
 
