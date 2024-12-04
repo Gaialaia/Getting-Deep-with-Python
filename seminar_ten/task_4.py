@@ -3,6 +3,9 @@ class Animal:
     def __init__(self, name):
         self.name = name
 
+    def animal_name(self):
+        return self.name
+
 
     def show_size(self):
         pass
@@ -15,20 +18,16 @@ class Animal:
         return f'{self.__class__.__name__} {self.name}'
 
 
-
-
-
-
 class Bird(Animal):
 
-    def __init__(self, name, wingspan):
+    def __init__(self, name, wingspan=0):
         self.wingspan = wingspan
-        super().__init__(name)
+        Animal.__init__(self, name)
 
 
 
-    def show_size(self):
-        wing_length = 0
+    def show_wing_length(self):
+        wing_length = self.wingspan / 2
         return wing_length
 
 
@@ -88,9 +87,17 @@ class Animal_factory():
         else:
             print(f' wrong {animal_type}')
 
+if __name__ == '__main__':
 
-bird1 = Animal_factory.create_animal('bird', 'Fluffy', 120)
-fish1 = Animal_factory.create_animal('fish', 70, 'Guru')
-mammal1 = Animal_factory.create_animal('mammal', 'Kitty', 30)
+    animal1 = Animal_factory.create_animal('bird', 'Fluffy', 120)
+    animal2 = Animal_factory.create_animal('fish', 70, 'Guru')
+    animal3 = Animal_factory.create_animal('mammal', 'Kitty', 30)
 
+    bird2 = Bird('Sparrow', 20)
+    fish2 = Fish('Flounder', 20)
+    elephant = Mammal('Bambie', 500)
+
+
+    print(fish2.show_size())
+    print(elephant.show_weight())
 
