@@ -15,7 +15,7 @@ class Animal:
 
 
     def __str__(self):
-        return f'{self.__class__.__name__} {self.name}'
+        return f'Animal kind: {self.__class__.__name__}, animal name: {self.name}'
 
 
 class Bird(Animal):
@@ -32,9 +32,7 @@ class Bird(Animal):
 
 
     def __str__(self):
-        return f'{super().__str__()} {self.wingspan}'
-
-
+        return f'{super().__str__()} wing length: {self.wingspan}'
 
 
 class Fish(Animal):
@@ -46,36 +44,36 @@ class Fish(Animal):
 
     def show_size(self):
         if self.max_depth < 10:
-            print(f'{self.name} is shallow water fish')
+            return f'{self.name} is shallow water fish'
         elif self.max_depth < 100:
-            print(f'{self.name} is deep water fish')
+            return f'{self.name} is deep water fish'
         else:
-            print(f'{self.name} is average water fish')
+            return f'{self.name} is average water fish'
 
 
     def __str__(self):
-        return f'{super().__str__()} {self.max_depth}'
+        return f'{super().__str__()} maximum living depth: {self.max_depth}'
 
 
 class Mammal(Animal):
 
     def __init__(self, name, weight):
         self.weight = weight
-        super().__init__(name)
+        Animal.__init__(self,name)
 
 
     def show_weight(self):
         if self.weight < 1:
-            print(f'{self.name} is a tiny mammal')
+            return f'{self.name} is a tiny mammal'
         elif self.weight > 100:
-            print(f'{self.name} is a giant mammal')
+            return f'{self.name} is a giant mammal'
         else:
-            print(f'{self.name} is an usual mammal')
+            return f'{self.name} is an usual mammal'
 
     def __str__(self):
-        return f'{super().__str__()} {self.weight}'
+        return f'{super().__str__()} weight: {self.weight}'
 
-class Animal_factory():
+class Animal_factory(Animal):
 
     def create_animal(animal_type, *args):
         animal_classes = {'bird': Bird,
@@ -96,8 +94,11 @@ if __name__ == '__main__':
     bird2 = Bird('Sparrow', 20)
     fish2 = Fish('Flounder', 20)
     elephant = Mammal('Bambie', 500)
+    print(elephant)
+    print(fish2)
 
 
     print(fish2.show_size())
     print(elephant.show_weight())
+
 
