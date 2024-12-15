@@ -29,7 +29,7 @@ class Person:
 
 if __name__ == '__main__':
     p1 = Person('Papaya', 16, 'katya@.py')
-    print(p1.name)   # Attribute Error ?
+    print(p1.name)
 
 
 
