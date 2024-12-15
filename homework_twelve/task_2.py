@@ -23,7 +23,8 @@ class Person:
         elif attr == 'email':
             if '@' not in value:
                 raise ValueError('invalid email')
-        # self.__dict__[attr] = value
+        # # self.__dict__[attr] = value
+        super().__setattr__(attr, value) # lets to print instance.name without it gives error "object has no attr 'attr"
 
 
 if __name__ == '__main__':
