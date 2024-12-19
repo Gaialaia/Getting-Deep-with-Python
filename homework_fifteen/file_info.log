@@ -1,0 +1,14 @@
+2024-12-19 18:47:46,466 — Namedtuple logging — INFO — Hello
+2024-12-19 18:49:15,124 — Namedtuple logging — INFO — File info is successfully placed to named tuple Content(is_file=True, is_directory=False, name='karma', extension='.log', parent_dir='../homework_thirteen/karma.log') 
+2024-12-19 18:50:41,049 — Namedtuple logging — INFO — File info is successfully placed to named tuple 
+ Content(is_file=True, is_directory=False, name='karma', extension='.log', parent_dir='../homework_thirteen/karma.log') 
+2024-12-19 18:51:12,908 — Namedtuple logging — INFO — File info is successfully placed to named tuple: 
+Content(is_file=True, is_directory=False, name='karma', extension='.log', parent_dir='../homework_thirteen/karma.log')
+2024-12-19 19:18:49,195 — Namedtuple logging — INFO — File info is successfully placed to named tuple: 
+Content(is_file=False, is_directory=True, name='/home/gaia/PycharmProjects/Getting Deep Into Python', extension=None, parent_dir='flower')
+2024-12-19 19:19:27,077 — Namedtuple logging — INFO — File info is successfully placed to named tuple: 
+Content(is_file=True, is_directory=False, name='loop', extension='.py', parent_dir='../loops/loop.py')
+2024-12-19 19:21:29,305 — Namedtuple logging — INFO — File info is successfully placed to named tuple: 
+Content(is_file=True, is_directory=False, name='loop', extension='.py', parent_dir='../loops/loop.py')
+2024-12-19 19:21:29,305 — Namedtuple logging — INFO — File info is successfully placed to named tuple: 
+Content(is_file=True, is_directory=False, name='_abc', extension='.py', parent_dir='../../../.cache/JetBrains/PyCharmCE2024.2/python_stubs/1020079574/_abc.py')
