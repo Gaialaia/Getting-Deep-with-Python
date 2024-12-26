@@ -7,9 +7,9 @@
 from datetime import datetime
 
 now = datetime.now()
-formatted_date = now.strftime('\033[1;32m \ndate: %Y-%m-%d \033[1;33m \ntime: %H:%M:%S '
-                           '\033[1;31m \nweekday: %A \033[1;36m \nweek number: %W \n')
+formatted_date = (now.strftime
+                  ('\033[1;32m \ndate: %Y-%m-%d \033[1;33m \ntime: %H:%M:%S '
+                   '\033[1;31m \nweekday: %A \033[1;36m \nweek number: %W \n'))
 
-print(formatted_date)
-
-
+if __name__ == '__main__':
+    print(formatted_date)

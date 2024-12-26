@@ -29,56 +29,21 @@ logger_info.critical('critical')
 logger_info.error('error')
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # def log_all():
 #
-#     logger.debug('Detailed information, typically only of interest to a developer trying to diagnose a problem.')
+#     logger.debug('Detailed information,
+#     typically only of interest to a developer trying to diagnose a problem.')
 #     logging.info('Confirmation that things are working as expected.')
 #     logger.warning('An indication that something unexpected happened, '
 #                    'or that a problem might occur in the near future'
-#                    ' (e.g. ‘disk space low’). The software is still working as expected.')
+#                    ' (e.g. ‘disk space low’).
+#                    The software is still working as expected.')
 #
-#     logging.error('Due to a more serious problem, the software has not been able to perform some function.')
-#     logging.critical('A serious error, indicating that the program itself may be unable to continue running.')
+#     logging.error('Due to a more serious problem,
+#     the software has not been able to perform some function.')
+#     logging.critical('A serious error, indicating that the program
+#     itself may be unable to continue running.')
 #
-
 # logging.basicConfig(filename='project.log',level=logging.INFO)
 # logging.getLogger('Main project file')
 # logger.warning('Attention. We are using new functions from another module')
